@@ -18,13 +18,13 @@ public class APP {
 
         double AmountDouble = Double.parseDouble(Amount);
         double TaxRate = 0.0;
-
+        String OutPutString = "";
         if(State.equals("WI"))
         {
             TaxRate = .055;
             double Tax = AmountDouble * TaxRate;
-            System.out.println("The Subtotal is $" + Math.round(AmountDouble * 100.0) / 100.0 + ".");
-            System.out.println("The tax is $" + Math.round(Tax * 100.0) / 100.0 + ".");
+            OutPutString += "The Subtotal is $" + Math.round(AmountDouble * 100.0) / 100.0 + ".";
+            OutPutString += "\nThe tax is $" + Math.round(Tax * 100.0) / 100.0 + ".";
         }
 
         double Tax = AmountDouble * TaxRate;
@@ -34,7 +34,9 @@ public class APP {
 
 
 
-        System.out.println("The total is $" + ActualTotal + ".");
+        OutPutString += "\nThe total is $" + ActualTotal + ".";
+
+        System.out.println(OutPutString);
 
 
 
